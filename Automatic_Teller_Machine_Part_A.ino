@@ -1,3 +1,4 @@
+// Full code is not added.
 /**                  Project Title-AUTOMATIC TELLER MACHINE.
  *                   
  *          PART-A
@@ -50,47 +51,5 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-   int L =digitalRead(LIGHT);// read the sensor
-      if(L == 1){
-    digitalWrite(RELAY,LOW);// turn the relay ON
-    Serial.println(" light is ON");
-  }else{
-     digitalWrite(RELAY,HIGH);// turn the relay OFF
-     Serial.println("  === light is OFF");    
-  }
-  delay(500);
-  */
-digitalWrite(trigPin,HIGH);
-delayMicroseconds(500);
-digitalWrite(trigPin,LOW);
-
-duration = pulseIn(echoPin,HIGH); /*it starts counting number of microseconds until echoPin goes High &
-                                  store that value to the variable duration,
-                                   now this duration is then converted to the distance by the formula*/
-distance = (duration/2)/29.1;
-delay(200);
-if(distance<25)
-{
-  tone(buzzled,1000);
-  count++;
-
-  Serial.print("Distance = ");
-Serial.print(distance);
-Serial.print("cm");
-Serial.println(" ");
-Serial.print("Number of person = ");
-Serial.print(count);
-Serial.println(" ");
-delay(500);
-Serial.println(" ");
-  {
- (!SD.begin(SD_ChipSelectPin));       //see if the card is present and can be initialized
-                                  
-  tmrpcm.setVolume(6);                    //0 to 7. Set volume level
-  tmrpcm.play("1.wav");         //the sound file "1" will play each time the arduino powers up, or is reset
-  }
-}
-else
-noTone(buzzled);
+  
 }
